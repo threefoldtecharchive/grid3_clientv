@@ -54,7 +54,24 @@
       <div class="doc-container">
         <div class="doc-content">
           						<section id="README" class="doc-node">
-							<div class="title"><h1> README</h1></div>
+							<div class="title"><h1> README</h1></div><h1>Actor Based Client for TFGrid</h1>
+<p>Actor based development is the way how to do large scale automation and sysadmin, we want to use V to create a client which supports this mechanism.</p>
+<ul>
+<li>see the doc example on <a href="https://threefoldtech.github.io/grid3_clientv/">https://threefoldtech.github.io/grid3_clientv/</a></li>
+</ul>
+<h2>some concepts</h2>
+<ul>
+<li>DSL = domain specific language</li>
+<li>ACTOR based paradigm see <a href="https://doc.akka.io/docs/akka/current/typed/guide/actors-intro.html">https://doc.akka.io/docs/akka/current/typed/guide/actors-intro.html</a> for an intro of some of the concepts and <a href="https://www.reactivemanifesto.org/">https://www.reactivemanifesto.org/</a></li>
+</ul>
+<h2>deliverables</h2>
+<ul>
+<li>a very well defined DSL</li>
+<li>all used models in ZOS and TFGrid for provisioning documented in V  (structs, autogen docs)</li>
+<li>create actor methods which use those models, document those methods well also using V</li>
+<li>the generated documentation is easy to read</li>
+<li>the actors and models are complete: TFChain, ZOS delivery, TFProxy, TFHub, ... anything relevant to the TFGrid ecosystem</li>
+</ul>
 
 </section>
 
