@@ -18,15 +18,15 @@ pub struct PowerManagerRacktivityItem {
 
 // get the actor for specific rackticity
 pub fn new() !PowerManagerRacktivity {
-	return
+	return PowerManagerRacktivity{}
 }
 
 // add a dvevice
 pub fn (mut a PowerManagerRacktivity) device_add(args PowerManagerRacktivityItem) ! {
 	mut i := PowerManagerRacktivityItem{
-		ipaddr: ipaddr
-		nrports: nrports
-		secret: secret
+		ipaddr: args.ipaddr
+		nrports: args.nrports
+		secret: args.secret
 	}
 	a.items << i
 }
@@ -48,6 +48,7 @@ pub fn (mut a PowerManagerRacktivity) power_off(name string, portnr int) ! {
 // 	port int
 // return true of power is on
 pub fn (mut a PowerManagerRacktivity) power_status(name string, portnr int) !bool {
+	return true
 }
 
 // power used
@@ -55,4 +56,5 @@ pub fn (mut a PowerManagerRacktivity) power_status(name string, portnr int) !boo
 // 	port int
 // returns the power as used in TBD interval, is in watthour (wh)
 pub fn (mut a PowerManagerRacktivity) power_used(name string, portnr int) !u32 {
+	return 120
 }
