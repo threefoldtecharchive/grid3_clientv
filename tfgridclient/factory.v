@@ -1,16 +1,22 @@
 module tfgridclient
 
-import tfgridclient.powermanager_racktivity
-
-// type Actor = powermanager_racktivity.PowerManagerRacktivity
+import tfgridclient.powermanager_factory
 
 [heap]
 pub struct ActorsFactory {
 pub mut:
-	// actors []Actor
-	name string
+	power powermanager_factory.PowerManagerFactory
 }
 
 pub fn new() ActorsFactory {
-	return ActorsFactory{}
+	return ActorsFactory{
+		power:powermanager_factory.PowerManagerFactory{}
+	}
 }
+
+
+// pub fn (mut f ActorsFactory) powermanager_factory_get() powermanager_factory.PowerManagerFactory {
+
+// 	return powermanager_factory.PowerManagerFactory{}
+
+// }

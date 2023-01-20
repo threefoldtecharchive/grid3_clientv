@@ -10,14 +10,15 @@ pub mut:
 
 [params]
 pub struct PowerManagerRacktivityItem {
-	name    string
+	id    string
 	ipaddr  string
 	nrports int // nr of ports which are in the device
 	secret  string
+	location string
 }
 
 // get the actor for specific rackticity
-pub fn new() !PowerManagerRacktivity {
+pub fn new() PowerManagerRacktivity {
 	return PowerManagerRacktivity{}
 }
 
